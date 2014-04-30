@@ -212,6 +212,32 @@ describe('HTTP Auth', function() {
                 }
                 socket.send('xmpp.http.approve', request, callback)
             })
+            
+            it('Sends expected response with <confirm/>', function(done) {
+                var request = {
+                    type: 'iq',
+                    id: '1',
+                    to: 'you',
+                    request: { id: '5', url: 'http', method: 'GET' }
+                }
+                xmpp.on('stanza', function(stanza) {
+                    stanza.is('iq').should.be.true
+                    stanza.attrs.to.should.equal(request.to)
+                    stanza.attrs.id.should.equal(request.id)
+                    stanza.attrs.type.should.equal('result')
+                    var confirm = stanza.getChild('confirm', http.NS)
+                    confirm.should.exist
+                    confirm.attrs.url.should.equal(request.request.url)
+                    confirm.attrs.method.should.equal(request.request.method)
+                    confirm.attrs.id.should.equal(request.request.id)
+                    done()
+                })
+                var callback = function(error, success) {
+                    should.not.exist(error)
+                    success.should.be.true
+                }
+                socket.send('xmpp.http.approve', request, callback)
+            })
 
         })
         
