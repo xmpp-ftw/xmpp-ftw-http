@@ -1,0 +1,22 @@
+<message type='normal'
+         from='files.shakespeare.lit' 
+         to='juliet@capulet.com'>
+  <thread>e0ffe42b28561960c6b12b944a092794b9683a38</thread>
+  <body>
+    Someone (maybe you) has requested the following file:
+
+       https://files.shakespeare.lit:9345/missive.html.
+
+    The transaction identifier is:
+
+       a7374jnjlalasdf82
+
+    If you wish to confirm the request, please reply
+    to this message by typing "OK". If not, please 
+    reply with "No".
+  </body>
+  <confirm xmlns='http://jabber.org/protocol/http-auth'
+           id='a7374jnjlalasdf82'
+           method='GET'
+           url='https://files.shakespeare.lit:9345/missive.html'/>
+</message>

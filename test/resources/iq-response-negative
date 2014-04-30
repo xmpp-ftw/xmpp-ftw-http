@@ -1,0 +1,12 @@
+<iq type='error' 
+    from='juliet@capulet.com/balcony' 
+    to='files.shakespeare.lit' 
+    id='ha000'>
+  <confirm xmlns='http://jabber.org/protocol/http-auth'
+           id='a7374jnjlalasdf82'
+           method='GET'
+           url='https://files.shakespeare.lit:9345/missive.html'/>
+  <error code='401' type='auth'>
+    <not-authorized xmlns='urn:ietf:params:xml:xmpp-stanzas'/>
+  </error>
+</iq>

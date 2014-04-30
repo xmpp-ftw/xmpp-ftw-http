@@ -1,0 +1,4 @@
+<iq type='result' 
+    from='juliet@capulet.com/balcony' 
+    to='files.shakespeare.lit' 
+    id='ha000'/>
