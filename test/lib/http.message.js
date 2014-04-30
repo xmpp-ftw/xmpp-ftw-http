@@ -49,10 +49,11 @@ describe('HTTP Auth', function() {
 
     describe('Message', function() {
         
+        var stanza = helper.getStanza('message-confirmation')
+        
         describe('Incoming confirmation request', function() {
             
             it('Accepts an incoming message confirmation request', function() {
-                var stanza = helper.getStanza('message-confirmation')
                 http.handles(stanza).should.be.true
             })
             
@@ -62,6 +63,23 @@ describe('HTTP Auth', function() {
                 http.handles(stanza).should.be.false
                 
             })
+            
+            it('Sends expected information through', function(done) {
+                socket.on('xmpp.http.confirm', function(data) {
+                    data.from.should.equal('files.shakespeare.lit')
+                    data.id.should.equal('e0ffe42b28561960c6b12b944a092794b9683a38')
+                    data.description
+                        .should.include('Someone (maybe you) has requested')
+                    data.type.should.equal('message')
+                    data.request.id.should.equal('a7374jnjlalasdf82')
+                    data.request.method.should.equal('GET')
+                    data.request.url
+                        .should.equal('https://files.shakespeare.lit:9345/missive.html')
+                    done()
+                })
+                http.handle(stanza).should.be.true
+            })
+            
         })
 
     })
