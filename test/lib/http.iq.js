@@ -93,7 +93,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Callback should be a function')
                     done()
                 })
-                socket.send('xmpp.http.approve', request, true)
+                socket.send('xmpp.http.confirm', request, true)
             })
             
             it('Errors if missing \'type\'', function(done) {
@@ -105,7 +105,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'type\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors on invalid \'type\'', function(done) {
@@ -117,7 +117,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Invalid \'type\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors if \'id\' is missing', function(done) {
@@ -129,7 +129,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'id\' parameter')
                     done()
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
             
             it('Errors if missing \'to\'', function(done) {
@@ -141,7 +141,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'to\' parameter')
                     done()
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
             
             it('Errors if \'to\' is empty', function(done) {
@@ -153,7 +153,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'to\' parameter')
                     done()
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
             
             it('Errors if \'request\' but not \'url\'', function(done) {
@@ -165,7 +165,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing request \'url\' parameter')
                     done()
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
 
             it('Errors if \'request\' but not \'id\'', function(done) {
@@ -177,7 +177,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing request \'id\' parameter')
                     done()
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
 
             it('Errors if \'request\' but not \'method\'', function(done) {
@@ -194,7 +194,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing request \'method\' parameter')
                     done()
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
             
             it('Sends expected minimal response', function(done) {
@@ -210,7 +210,7 @@ describe('HTTP Auth', function() {
                     should.not.exist(error)
                     success.should.be.true
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
             
             it('Sends expected response with <confirm/>', function(done) {
@@ -236,7 +236,7 @@ describe('HTTP Auth', function() {
                     should.not.exist(error)
                     success.should.be.true
                 }
-                socket.send('xmpp.http.approve', request, callback)
+                socket.send('xmpp.http.confirm', request, callback)
             })
 
         })

@@ -94,7 +94,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'type\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors on invalid \'type\'', function(done) {
@@ -106,7 +106,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Invalid \'type\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors if missing \'to\'', function(done) {
@@ -118,7 +118,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'to\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors if \'to\' is empty', function(done) {
@@ -130,7 +130,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'to\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors if no \'request\' element', function(done) {
@@ -142,7 +142,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing \'request\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Errors if \'request\' but not \'url\'', function(done) {
@@ -154,7 +154,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing request \'url\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
 
             it('Errors if \'request\' but not \'id\'', function(done) {
@@ -171,7 +171,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing request \'id\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
 
             it('Errors if \'request\' but not \'method\'', function(done) {
@@ -188,7 +188,7 @@ describe('HTTP Auth', function() {
                     error.description.should.equal('Missing request \'method\' parameter')
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Sends expected response', function(done) {
@@ -210,7 +210,7 @@ describe('HTTP Auth', function() {
                     confirm.attrs.id.should.equal(request.request.id)
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
             it('Sends expected response without <thread/>', function(done) {
@@ -224,7 +224,7 @@ describe('HTTP Auth', function() {
                     should.not.exist(stanza.getChild('thread'))
                     done()
                 })
-                socket.send('xmpp.http.approve', request)
+                socket.send('xmpp.http.confirm', request)
             })
             
         })
