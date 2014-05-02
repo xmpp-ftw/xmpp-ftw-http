@@ -66,7 +66,7 @@ describe('HTTP Auth', function() {
             })
             
             it('Sends expected information through', function(done) {
-                socket.on('xmpp.http.confirm', function(data) {
+                socket.on('xmpp.http.verify', function(data) {
                     data.from.should.eql({ domain: 'files.shakespeare.lit' })
                     data.id.should.equal('ha000')
 
