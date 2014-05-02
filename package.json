@@ -1,6 +1,6 @@
 {
   "name": "xmpp-ftw-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verifying HTTP Requests via XMPP (XEP-0070) plugin for XMPP-FTW",
   "main": "index.js",
   "directories": {
