@@ -1,1 +1,9 @@
 node_modules
+.settings
+.project
+.classpath
+npm-debug.log
+*.geany
+*~
+*.swp
+coverage
