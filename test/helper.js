@@ -31,3 +31,5 @@ exports.SocketEventer = SocketEventer
 exports.failingItemParser = function() {
     throw new Error('FAIL!')
 }
+
+exports.ltx = ltx

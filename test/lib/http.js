@@ -53,4 +53,8 @@ describe('HTTP Auth', function() {
         http.NS.should.equal(namespace)
     })
 
+    it('Returns false from handle() if we send presence stanza', function() {
+        http.handle(new helper.ltx.parse('<presence/>')).should.be.false
+    })
+
 })
