@@ -60,7 +60,7 @@ describe('HTTP Auth', function() {
             
             it('Does not accept a non-confirm message', function() {
                 var stanza = helper.getStanza('message-confirmation')
-                stanza.removeChild('confirm', http.NS)
+                stanza.remove('confirm', http.NS)
                 http.handles(stanza).should.be.false
                 
             })
@@ -70,7 +70,7 @@ describe('HTTP Auth', function() {
                     data.from.should.eql({ domain: 'files.shakespeare.lit' })
                     data.id.should.equal('e0ffe42b28561960c6b12b944a092794b9683a38')
                     data.description
-                        .should.include('Someone (maybe you) has requested')
+                        .should.containEql('Someone (maybe you) has requested')
                     data.type.should.equal('message')
                     data.request.id.should.equal('a7374jnjlalasdf82')
                     data.request.method.should.equal('GET')

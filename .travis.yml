@@ -1,17 +1,11 @@
 sudo: false
-
-language: node_js
-
 node_js:
-  - '0.10'
-  - '0.12'
-  - '4.0'
-  - '4.1'
-  - '4.2'
-  - 'stable'
-
-before_script:
-  - npm install -g standard
+  - "stable"
+  - "4.2"
+  - "0.12"
+  - "0.11"
+  - "0.10"
+language: node_js
 
 after_script:
   - npm run coveralls
