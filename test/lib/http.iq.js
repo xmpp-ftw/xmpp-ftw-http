@@ -60,7 +60,7 @@ describe('HTTP Auth', function() {
             
             it('Does not accept a non-confirm IQ', function() {
                 var stanza = helper.getStanza('iq-confirmation')
-                stanza.removeChild('confirm', http.NS)
+                stanza.remove('confirm')
                 http.handles(stanza).should.be.false
                 
             })
