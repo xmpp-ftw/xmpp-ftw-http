@@ -41,7 +41,7 @@
     "grunt-mocha-istanbul": "^4.0.0",
     "istanbul": "^0.4.0",
     "mocha": "^2.0.1",
-    "should": "~8.3.1",
+    "should": "~9.0.0",
     "xmpp-ftw": "1.x"
   },
   "peerDependencies": {
