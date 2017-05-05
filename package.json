@@ -29,20 +29,20 @@
     "url": "https://github.com/xmpp-ftw/xmpp-ftw-http/issues"
   },
   "dependencies": {
-    "ltx": "2.2.1",
-    "xmpp-ftw": "1.x"
+    "ltx": "2.7.1",
+    "xmpp-ftw": "^2.0.0"
   },
   "devDependencies": {
     "coveralls": "^2.11.4",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.0.1",
-    "grunt-contrib-jshint": "~0.11.3",
-    "grunt-mocha-cli": "~2.1.0",
-    "grunt-mocha-istanbul": "^4.0.0",
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-mocha-cli": "~3.0.0",
+    "grunt-mocha-istanbul": "^5.0.2",
     "istanbul": "^0.4.0",
-    "mocha": "^2.0.1",
-    "should": "~8.3.1",
-    "xmpp-ftw": "1.x"
+    "mocha": "^3.3.0",
+    "should": "~11.2.1",
+    "xmpp-ftw": "^2.0.0"
   },
   "peerDependencies": {
     "xmpp-ftw": "1.x"
