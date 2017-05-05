@@ -1,6 +1,8 @@
 xmpp-ftw-http
 ===================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/xmpp-ftw/xmpp-ftw-http.svg)](https://greenkeeper.io/)
+
 Verifying HTTP Requests via XMPP (XEP-0070) plugin for XMPP-FTW.
 
 https://github.com/xmpp-ftw/xmpp-ftw.git
